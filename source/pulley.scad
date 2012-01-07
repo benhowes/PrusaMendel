@@ -26,7 +26,7 @@ module pulley()
 
 	module spur()
 	{
-		linear_extrude(height=20) polygon([[-1,-1],[-1,1],[0.7,0.7],[0.7,-0.7]],[[0,1,2,3,0]]);
+		translate([0,0,5]) linear_extrude(height=15) polygon([[-1,-1],[-1,1],[0.7,0.7],[0.7,-0.7]],[[0,1,2,3,0]]);
 	}
 	
  difference()
@@ -60,7 +60,7 @@ module pulley()
 		//entrance
 		translate([0,-3,15]) cube([m3_nut_diameter+0.5,5,3],center=true);
 		//nut
-		translate([0,0,13.6]) rotate([0,0,30]) nut(m3_nut_diameter+0.5, 3, false);
+		translate([0,0,13.5]) rotate([0,0,30]) nut(m3_nut_diameter+0.5, 3, false);
 		//grub hole
 		translate([0,0,9]) cylinder(r=m3_diameter/2,h=10, $fn=15);
 	}

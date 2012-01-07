@@ -44,8 +44,8 @@ difference(){
 
 
 
-	translate([9, outer_diameter-opening_size/2, 0]) cube([18,opening_size,20]);
-	translate([outer_diameter, outer_diameter, 0]) cylinder(h =20, r = m8_diameter/2, $fn = 18);
+	translate([9, outer_diameter-opening_size/2, -0.5]) cube([18,opening_size,21]);
+	translate([outer_diameter, outer_diameter, -0.5]) cylinder(h =21, r = m8_diameter/2, $fn = 18);
 
 	//Securing hole
 	translate([17, 17, 5]) rotate([90, 0, 0]) cylinder(h =20, r = m3_diameter/2, $fn = 10);
